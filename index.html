@@ -60,18 +60,18 @@
             class="navbar-nav d-flex justify-content-center align-items-center"
           >
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="#sobre-mi"
                 >Sobre mí</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Proyectos</a>
+              <a class="nav-link" href="#proyectos">Proyectos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Testimonios</a>
+              <a class="nav-link" href="#testimonios">Testimonios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contactos</a>
+              <a class="nav-link" href="#contacto">Contacto</a>
             </li>
           </ul>
         </div>
@@ -101,7 +101,7 @@
     </section>
 
     <!-- Sobre mi -->
-    <section class="sobre-mi seccion-oscura">
+    <section id="sobre-mi" class="sobre-mi seccion-oscura">
       <div class="contenedor">
         <h2 class="seccion-titulo">Sobre mí</h2>
         <p class="seccion-texto">
@@ -171,7 +171,10 @@
     </section>
 
     <!-- Proyectos -->
-    <section class="proyectos-recientes seccion-clara d-flex flex-column">
+    <section
+      id="proyectos"
+      class="proyectos-recientes seccion-clara d-flex flex-column"
+    >
       <h2 class="seccion-titulo texto-negro">Mis Proyectos</h2>
       <h3 class="seccion-descripcion">
         Estos son algunos de mis proyectos en los que estuver trabajando
@@ -387,21 +390,8 @@
       </a> -->
     </section>
 
-    <!-- Articulos -->
-    <!-- <section class="articulos justify-content-start">
-      <h2>Articulos</h2>
-      <div class="card">
-        <div class="card-header">Mas recientes</div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-      </div>
-    </section> -->
-
     <!-- Testimonios -->
-    <section class="testimonios seccion-clara">
+    <section id="testimonios" class="testimonios seccion-clara">
       <h1 class="seccion-titulo">Testimonios</h1>
       <h3 class="seccion-descripcion">
         Estos son algunos testimonios de mis clientes
@@ -487,7 +477,7 @@
     </section>
 
     <!-- Contacto -->
-    <section class="contacto seccion-oscura">
+    <section id="contacto" class="contacto seccion-oscura">
       <div class="container">
         <div
           class="container text-center rectangulo d-flex justify-content-evenly"
@@ -551,6 +541,8 @@
           <i class="bi bi-envelope"></i>
         </a>
       </div>
+
+      <div class="derechos-de-autor">Creado por Angel Chaile (2024) &#169;</div>
     </footer>
 
     <script src="script.js"></script>
