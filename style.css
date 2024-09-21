@@ -96,6 +96,27 @@ section {
   text-align: center;
 }
 
+/* Botón para descargar el CV */
+.btn-cv {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 20px 0;
+  background-color: #007bff; 
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cv:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
 /* Experiencia */
 .experiencia {
   padding: 40px 40px 60px 40px;
@@ -146,7 +167,7 @@ section {
 }
 
 .proyectos-recientes img {
-  max-height:243px;
+  max-height: 243px;
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -188,14 +209,6 @@ section {
 .proyecto:hover img {
   opacity: 0.2;
 }
-
-/* estilos a los i de los proyectos recien añadidos */
-
-.proyecto:hover .icons-proyects {
-  opacity: 0.2;
-}
-
-/*------------------*/
 
 .proyecto:hover .overlay {
   opacity: 1;
@@ -394,6 +407,11 @@ section {
 @media screen and (max-width: 767px) {
   .navbar-brand {
     display: none;
+  }
+
+  .btn-cv {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
 
