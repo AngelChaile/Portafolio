@@ -49,7 +49,7 @@ section {
   font-size: 1.2rem;
 }
 
-.btn-info {
+.btn-secondary {
   font-size: 1.1rem;
   margin: 20px;
 }
@@ -402,6 +402,12 @@ section {
   .overlay i {
     font-size: 40px;
   }
+
+
+  .btn-cv {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -412,6 +418,15 @@ section {
   .btn-cv {
     font-size: 1rem;
     padding: 10px 20px;
+  }
+
+  .proyectos-recientes img {
+    max-height: 198px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2s ease;
   }
 }
 
@@ -424,10 +439,37 @@ section {
   .testimonio-texto {
     font-size: 18px;
   }
+
+
+  .btn-cv {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+
+  .proyectos-recientes img {
+    max-height: 198px;
+    width: 100%;
+
+  }
 }
 
 @media screen and (min-width: 700px) {
   .hero-inferior-imagen {
     max-width: 600px;
+  }
+
+
+  .btn-cv {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media screen and (max-width: 1083px) {
+
+  .proyectos-recientes img {
+    max-height: 198px;
+    width: 100%;
   }
 }
