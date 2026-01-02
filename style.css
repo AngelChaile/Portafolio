@@ -154,12 +154,23 @@ h1, h2, h3, h4, h5, h6 {
   animation: float 6s ease-in-out infinite;
 }
 
-.avatar-initials {
+/* .avatar-initials {
   font-size: 5rem;
   font-weight: 700;
   color: white;
   font-family: 'Space Grotesk', sans-serif;
+} */
+
+
+.avatar-image {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: var(--box-shadow);
 }
+
 
 .avatar-badge {
   position: absolute;
@@ -203,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
   text-decoration: none;
   transition: var(--transition);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(24, 23, 23, 0.1);
 }
 
 .social-link:hover {
