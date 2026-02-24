@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjects();
     initAnimations();
     initScrollSpy();
-    initContactForm();
-    initThemeToggle();
-    initEmailCopy();
+    initEmailCopy(); // Función de copiar email
 });
 
 // Variable global para almacenar la función updateActiveNavLink
@@ -38,7 +36,7 @@ function initNavbar() {
             
             if (targetSection) {
                 window.scrollTo({
-                    top: targetSection.offsetTop - 80,
+                    top: targetSection.offsetTop - 76, // Ajustado
                     behavior: 'smooth'
                 });
                 
@@ -55,39 +53,54 @@ function initNavbar() {
 
 // Sistema de proyectos
 function initProjects() {
-    const verMasBtn = document.getElementById('ver-mas-proyectos');
-    const proyectosOcultos = document.querySelectorAll('.proyecto.ocultar-proyect');
+    // Inicializar Swiper solo en móvil
+    if (window.innerWidth < 768) {
+        initProjectSwiper();
+    }
     
-    if (verMasBtn) {
+    // Re-inicializar si cambia el tamaño de pantalla
+    window.addEventListener('resize', function() {
+        if (window.innerWidth < 768) {
+            if (!document.querySelector('.swiper-initialized')) {
+                initProjectSwiper();
+            }
+        } else {
+            const swiperContainer = document.querySelector('.swiper');
+            if (swiperContainer && swiperContainer.swiper) {
+                swiperContainer.swiper.destroy(true, true);
+                swiperContainer.classList.remove('swiper-initialized');
+            }
+        }
+    });
+    
+    // Manejar "Ver más proyectos" en desktop
+    const verMasBtn = document.getElementById('ver-mas-proyectos-desktop');
+    const proyectosAdicionales = document.getElementById('proyectos-adicionales');
+    
+    if (verMasBtn && proyectosAdicionales) {
         verMasBtn.addEventListener('click', function() {
-            proyectosOcultos.forEach(proyecto => {
-                proyecto.classList.toggle('visible');
-            });
+            proyectosAdicionales.classList.toggle('d-none');
             
-            // Cambiar texto del botón
-            const proyectosVisibles = document.querySelectorAll('.proyecto.ocultar-proyect.visible');
-            
-            if (proyectosVisibles.length > 0) {
-                verMasBtn.innerHTML = '<i class="bi bi-chevron-up me-2"></i>Ver menos proyectos';
-                verMasBtn.classList.add('btn-primary');
-                verMasBtn.classList.remove('btn-outline-primary');
-            } else {
-                verMasBtn.innerHTML = '<i class="bi bi-grid-3x3-gap me-2"></i>Ver todos los proyectos';
+            if (proyectosAdicionales.classList.contains('d-none')) {
+                verMasBtn.innerHTML = '<i class="bi bi-chevron-down me-2"></i>Ver más proyectos';
                 verMasBtn.classList.remove('btn-primary');
                 verMasBtn.classList.add('btn-outline-primary');
+            } else {
+                verMasBtn.innerHTML = '<i class="bi bi-chevron-up me-2"></i>Ver menos proyectos';
+                verMasBtn.classList.remove('btn-outline-primary');
+                verMasBtn.classList.add('btn-primary');
+                
+                setTimeout(() => {
+                    proyectosAdicionales.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 100);
             }
-            
-            // Scroll suave a la sección de proyectos
-            setTimeout(() => {
-                document.querySelector('#proyectos').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }, 300);
         });
     }
     
-    // Efecto hover mejorado para proyectos (nueva estructura)
+    // Efecto hover para proyectos
     const projectCards = document.querySelectorAll('.project-card');
     if (projectCards.length > 0) {
         projectCards.forEach(card => {
@@ -100,25 +113,47 @@ function initProjects() {
             });
         });
     }
-    
-    // También manejar proyectos antiguos si existen
-    const oldProjectCards = document.querySelectorAll('.proyecto');
-    if (oldProjectCards.length > 0) {
-        oldProjectCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
+}
+
+// Función para inicializar Swiper
+function initProjectSwiper() {
+    const oldSwiper = document.querySelector('.swiper');
+    if (oldSwiper && oldSwiper.swiper) {
+        oldSwiper.swiper.destroy(true, true);
     }
+    
+    const swiper = new Swiper('.proyectos-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
+        on: {
+            init: function() {
+                document.querySelector('.swiper').classList.add('swiper-initialized');
+            }
+        }
+    });
 }
 
 // Sistema de animaciones
 function initAnimations() {
-    // Animación de entrada para elementos
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -134,7 +169,6 @@ function initAnimations() {
         });
     }, observerOptions);
     
-    // Observar elementos que deben animarse
     const animatedElements = document.querySelectorAll('[data-aos]');
     animatedElements.forEach(el => observer.observe(el));
 }
@@ -144,7 +178,6 @@ function initScrollSpy() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    // Actualizar la función global
     updateActiveNavLink = function() {
         let scrollY = window.pageYOffset;
         let currentActive = null;
@@ -159,7 +192,6 @@ function initScrollSpy() {
             }
         });
         
-        // Actualizar enlaces activos
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${currentActive}`) {
@@ -170,64 +202,8 @@ function initScrollSpy() {
         });
     }
     
-    // Llamar inicialmente y en cada scroll
     updateActiveNavLink();
     window.addEventListener('scroll', updateActiveNavLink);
-}
-
-// Formulario de contacto (si se agrega en el futuro)
-function initContactForm() {
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // Simular envío
-            submitBtn.innerHTML = '<span class="loading"></span> Enviando...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                
-                // Mostrar mensaje de éxito
-                showNotification('Mensaje enviado con éxito', 'success');
-                contactForm.reset();
-            }, 2000);
-        });
-    }
-}
-
-// Tema claro/oscuro (opcional)
-function initThemeToggle() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement;
-    
-    if (themeToggle) {
-        // Verificar preferencia guardada
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        htmlElement.setAttribute('data-bs-theme', savedTheme);
-        
-        themeToggle.addEventListener('click', function() {
-            const currentTheme = htmlElement.getAttribute('data-bs-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            htmlElement.setAttribute('data-bs-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            // Cambiar ícono
-            const icon = this.querySelector('i');
-            if (icon) {
-                icon.className = newTheme === 'light' ? 'bi bi-sun' : 'bi bi-moon';
-            }
-            
-            showNotification(`Tema ${newTheme === 'light' ? 'claro' : 'oscuro'} activado`);
-        });
-    }
 }
 
 // Copiar email al portapapeles
@@ -250,7 +226,6 @@ function initEmailCopy() {
 
 // Notificaciones
 function showNotification(message, type = 'info') {
-    // Verificar si ya existe una notificación
     const existingNotification = document.querySelector('.notification');
     if (existingNotification) {
         document.body.removeChild(existingNotification);
@@ -267,12 +242,10 @@ function showNotification(message, type = 'info') {
     
     document.body.appendChild(notification);
     
-    // Mostrar
     setTimeout(() => {
         notification.classList.add('show');
     }, 100);
     
-    // Ocultar y eliminar
     setTimeout(() => {
         notification.classList.remove('show');
         setTimeout(() => {
@@ -283,7 +256,7 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
-// Agregar estilos CSS para notificaciones dinámicamente si no existen
+// Agregar estilos CSS para notificaciones
 function injectNotificationStyles() {
     if (!document.querySelector('#notification-styles')) {
         const style = document.createElement('style');

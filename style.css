@@ -583,10 +583,7 @@ to { transform: rotate(360deg); }
 }
 
 
-
-/* AÑADE ESTO AL FINAL DE TU style.css */
-
-/* Solución definitiva para navbar fijo */
+/* navbar fijo */
 @media (max-width: 991.98px) {
   body {
     padding-top: 56px; /* Ajusta según la altura real de tu navbar */
@@ -633,22 +630,7 @@ html, body {
   padding-right: 15px;
 }
 
-/* Reset del padding-top que causó problemas */
-@media (max-width: 768px) {
-  .hero-section {
-    padding-top: 0 !important;
-    text-align: left !important; /* NO center */
-  }
-  
-  body {
-    padding-top: 70px; /* Esto compensa el navbar fijo */
-  }
-  
-  .hero-content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+
 
 /* Fix móvil: evitar que la navbar cubra el avatar */
 @media (max-width: 576px) {
@@ -689,5 +671,75 @@ html, body {
 
   .avatar-badge i {
     font-size: 1.2rem;
+  }
+}
+
+/* ===== SWIPER CARRUSEL ===== */
+.proyectos-swiper {
+  padding: 20px 10px 50px 10px;
+  margin: 0 -10px;
+}
+
+.swiper-slide {
+  height: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--gray-color);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
+  opacity: 1;
+  width: 20px;
+  border-radius: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color) !important;
+  background: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--primary-light);
+  transform: scale(1.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* Ocultar botones en móviles muy pequeños */
+  }
+  
+  .proyectos-swiper {
+    padding: 10px 5px 40px 5px;
   }
 }
