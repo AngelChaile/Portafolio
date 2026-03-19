@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+
+<head>
+  <!-- Metadatos mejorados -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="author" content="Angel Chaile - Desarrollador Web" />
+  <meta name="description"
+    content="Portafolio profesional de Angel Chaile - Técnico en Análisis de Sistemas especializado en desarrollo web" />
+  <meta name="keywords" content="HTML, CSS, JavaScript, React, PHP, Bootstrap, Desarrollo Web" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Angel Chaile | Portafolio Profesional" />
+  <meta property="og:description"
+    content="Desarrollador web especializado en crear soluciones digitales modernas y eficientes" />
+
+  <!-- Titulo -->
+  <title>Angel Chaile | Desarrollador Web</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/icono.png" type="image/x-icon" />
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Iconos de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Google Fonts mejoradas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Css -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!-- Barra de Navegación Mejorada -->
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <img src="img/icono.png" width="40" height="40" alt="Logo" class="me-2" />
+        <span class="gradient-text">Angel Chaile</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#habilidades">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#proyectos">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section Rediseñada -->
+  <section id="inicio" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6 order-lg-1 order-2" data-aos="fade-right">
+          <div class="hero-content">
+            <h6 class="text-primary mb-3">👋 Hola, soy</h6>
+            <h1 class="display-4 fw-bold mb-3">Angel Chaile</h1>
+            <h2 class="h3 text-secondary mb-4">Técnico en Análisis de Sistemas &<br><span
+                class="gradient-text">Desarrollador Web</span></h2>
+            <p class="lead mb-4">
+              Creo soluciones digitales modernas y eficientes con tecnologías web de vanguardia.
+              Apasionado por el desarrollo limpio, responsive y centrado en el usuario.
+            </p>
+            <div class="hero-buttons">
+              <a href="#proyectos" class="btn btn-primary btn-lg me-3">
+                <i class="bi bi-code-slash me-2"></i>Ver Proyectos
+              </a>
+              <a href="#contacto" class="btn btn-outline-primary btn-lg">
+                <i class="bi bi-chat-dots me-2"></i>Contáctame
+              </a>
+            </div>
+            <div class="social-links mt-5">
+              <a href="https://github.com/AngelChaile" target="_blank" class="social-link">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/angelchaile/" target="_blank" class="social-link">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="mailto:angelchaile90@gmail.com" class="social-link">
+                <i class="bi bi-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-2 order-1 mb-5 mb-lg-0" data-aos="fade-left">
+          <div class="hero-avatar">
+            <!-- Avatar en lugar de foto real -->
+            <div class="avatar-container">
+              <div class="avatar-circle">
+                <!-- <span class="avatar-initials">AC</span> -->
+                <img class="avatar-image" src="./8.jpg" alt="Avatar de Angel Chaile">
+              </div>
+              <div class="avatar-badge">
+                <i class="bi bi-code-slash"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre mí - Rediseñado -->
+  <section id="sobre-mi" class="py-5 bg-light">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+          <div class="about-image">
+            <div class="about-card p-4 shadow-lg">
+              <div class="about-content">
+                <h3 class="h4 mb-3">Acerca de mí</h3>
+                <p class="mb-4">
+                  Técnico Superior en Análisis de Sistemas con enfoque en desarrollo web full-stack.
+                  Especializado en crear soluciones eficientes y escalables utilizando las mejores prácticas
+                  de desarrollo.
+                </p>
+                <div class="about-stats">
+                  <div class="stat-item">
+                    <h4 class="text-primary mb-0">10+</h4>
+                    <p class="text-muted mb-0">Proyectos</p>
+                  </div>
+                  <div class="stat-item">
+                    <h4 class="text-primary mb-0">1+</h4>
+                    <p class="text-muted mb-0">Años de experiencia</p>
+                  </div>
+                  <div class="stat-item">
+                    <h4 class="text-primary mb-0">10+</h4>
+                    <p class="text-muted mb-0">Tecnologías</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="section-title mb-4">Mi Filosofía de Desarrollo</h2>
+          <p class="mb-4">
+            Creo en el desarrollo centrado en el usuario, donde cada línea de código sirve a un propósito
+            específico. Mi enfoque combina creatividad, eficiencia y mejores prácticas para entregar
+            productos que no solo funcionen, sino que inspiren.
+          </p>
+          <div class="mb-4">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-check-circle-fill text-primary me-3"></i>
+              <span>Código limpio y mantenible</span>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-check-circle-fill text-primary me-3"></i>
+              <span>Diseño responsive y accesible</span>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <i class="bi bi-check-circle-fill text-primary me-3"></i>
+              <span>Optimización de rendimiento</span>
+            </div>
+          </div>
+          <a href="AngelChaileCV.pdf" class="btn btn-primary" download="Angel_Chaile_CV.pdf">
+            <i class="bi bi-download me-2"></i>Descargar CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades" class="py-5">
+    <div class="container py-5">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Tecnologías & Habilidades</h2>
+        <p class="text-muted">Herramientas y tecnologías que domino y utilizo en mis proyectos</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Frontend -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-card h-100">
+            <div class="skill-icon bg-primary-light">
+              <i class="bi bi-layout-text-window text-primary"></i>
+            </div>
+            <h4 class="h5 mt-4 mb-3">Frontend</h4>
+            <p class="text-muted mb-4">
+              Desarrollo de interfaces modernas, responsive y accesibles utilizando las mejores prácticas.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript ES6+</span>
+              <span class="skill-tag">Bootstrap 5</span>
+              <span class="skill-tag">React</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-card h-100">
+            <div class="skill-icon bg-primary-light">
+              <i class="bi bi-server text-primary"></i>
+            </div>
+            <h4 class="h5 mt-4 mb-3">Backend</h4>
+            <p class="text-muted mb-4">
+              Desarrollo de APIs robustas, bases de datos y lógica de servidor para aplicaciones escalables.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-card h-100">
+            <div class="skill-icon bg-primary-light">
+              <i class="bi bi-tools text-primary"></i>
+            </div>
+            <h4 class="h5 mt-4 mb-3">Herramientas</h4>
+            <p class="text-muted mb-4">
+              Flujo de trabajo optimizado con herramientas modernas de desarrollo y colaboración.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Unity</span>
+              <span class="skill-tag">Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="py-5 bg-light">
+    <div class="container py-5">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <p class="text-muted d-block d-md-none">Desliza para ver más proyectos</p>
+        <p class="text-muted d-none d-md-block">Una selección de mis trabajos más recientes y desafiantes</p>
+      </div>
+
+      <!-- VERSIÓN DESKTOP: Grid normal (oculto en móvil) -->
+      <div class="d-none d-md-block">
+        <div class="row g-4" id="proyectos-grid">
+          <!-- Proyecto 1 - AllShop -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/AllShop.png" alt="AllShop Ecommerce" class="img-fluid">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/AngelChaile/AllShop/tree/develop" target="_blank" class="project-link">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://angelchaile.github.io/AllShop/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Ecommerce</span>
+                  <span class="project-tag">Full Stack</span>
+                </div>
+                <h4 class="project-title">AllShop</h4>
+                <p class="project-description">
+                  Plataforma de ecommerce completa con carrito de compras, sistema de autenticación y panel de
+                  administración.
+                </p>
+                <div class="project-tech">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>PostgreSQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 2 - Control de Asistencias -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/Control_de_asistencias.png" alt="Control de Asistencias" class="img-fluid">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/AngelChaile/control-asistencias-demo" target="_blank"
+                      class="project-link">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://control-asistencias-demo.vercel.app" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Sistema</span>
+                  <span class="project-tag">Web App</span>
+                </div>
+                <h4 class="project-title">Control de Asistencias</h4>
+                <p class="project-description">
+                  Sistema web para gestión de asistencias por QR con reportes automáticos y panel de administración.
+                </p>
+                <div class="project-tech">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Firestore</span>
+                  <span>Tailwind</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 3 - Gestock -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/Gestock.png" alt="Gestock" class="img-fluid">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/AngelChaile/GestorDeMovimientos" target="_blank" class="project-link">
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Finanzas</span>
+                  <span class="project-tag">Gestión</span>
+                </div>
+                <h4 class="project-title">Gestock</h4>
+                <p class="project-description">
+                  Aplicación web para gestión de movimientos financieros con categorización y reportes detallados.
+                </p>
+                <div class="project-tech">
+                  <span>PHP</span>
+                  <span>MySQL</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 4 - Control RRHH (siempre visible) -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/SCPD.png" alt="Control RRHH" class="img-fluid">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/AngelChaile/RRHH_Control_Partes_Demo" target="_blank"
+                      class="project-link">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://rrhh-control-partes-demo.vercel.app/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">RRHH</span>
+                  <span class="project-tag">Dashboard</span>
+                </div>
+                <h4 class="project-title">Control RRHH</h4>
+                <p class="project-description">
+                  Dashboard para gestión de recursos humanos con estadísticas, reportes y seguimiento de partes.
+                </p>
+                <div class="project-tech">
+                  <span>JavaScript</span>
+                  <span>Bootstrap</span>
+                  <span>WebSockets</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 5 - The Pupil (siempre visible) -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/Portada_The_Pupil.png" alt="Juego The Pupil" class="img-fluid">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/AngelChaile/ThePupilWebPage" target="_blank" class="project-link">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://angelchaile.github.io/ThePupilWebPage/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Juego</span>
+                  <span class="project-tag">2D RPG</span>
+                </div>
+                <h4 class="project-title">The Pupil</h4>
+                <p class="project-description">
+                  Juego educativo desarrollado en Unity que combina elementos de RPG clásico con contenido educativo.
+                </p>
+                <div class="project-tech">
+                  <span>C#</span>
+                  <span>Unity</span>
+                  <span>Aseprite</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 6 - LibConstruct (siempre visible) -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/Libconstruct.png" alt="LibConstruct" class="img-fluid">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/AngelChaile/Challenge1" target="_blank" class="project-link">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://angelchaile.github.io/Challenge1/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Corralon</span>
+                  <span class="project-tag">Construcción</span>
+                </div>
+                <h4 class="project-title">LibConstruct</h4>
+                <p class="project-description">
+                  Corralon de materiales de construcción con catálogo, contacto y sistema de pedidos.
+                </p>
+                <div class="project-tech">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>BEMSkel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón "Ver más proyectos" (DESKTOP) -->
+        <div class="text-center mt-4 d-none d-md-block" id="desktop-ver-mas-container">
+          <button id="ver-mas-proyectos-desktop" class="btn btn-outline-primary">
+            <i class="bi bi-chevron-down me-2"></i>Ver más proyectos
+          </button>
+        </div>
+      </div>
+
+      <!-- VERSIÓN MÓVIL: Swiper Carrusel (solo visible en móvil) -->
+      <div class="d-block d-md-none">
+        <div class="swiper proyectos-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 - AllShop -->
+            <div class="swiper-slide">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="img/AllShop.png" alt="AllShop Ecommerce" class="img-fluid">
+                  <div class="project-overlay">
+                    <div class="project-links">
+                      <a href="https://github.com/AngelChaile/AllShop/tree/develop" target="_blank"
+                        class="project-link">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://angelchaile.github.io/AllShop/" target="_blank" class="project-link">
+                        <i class="bi bi-eye"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <div class="project-tags">
+                    <span class="project-tag">Ecommerce</span>
+                    <span class="project-tag">Full Stack</span>
+                  </div>
+                  <h4 class="project-title">AllShop</h4>
+                  <p class="project-description">
+                    Plataforma de ecommerce completa con carrito de compras.
+                  </p>
+                  <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                    <span>PostgreSQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 - Control Asistencias -->
+            <div class="swiper-slide">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="img/Control_de_asistencias.png" alt="Control Asistencias" class="img-fluid">
+                  <div class="project-overlay">
+                    <div class="project-links">
+                      <a href="https://github.com/AngelChaile/control-asistencias-demo" target="_blank"
+                        class="project-link">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://control-asistencias-demo.vercel.app" target="_blank" class="project-link">
+                        <i class="bi bi-eye"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <div class="project-tags">
+                    <span class="project-tag">Sistema</span>
+                    <span class="project-tag">QR</span>
+                  </div>
+                  <h4 class="project-title">Control Asistencias</h4>
+                  <p class="project-description">
+                    Gestión de asistencias por QR con reportes automáticos.
+                  </p>
+                  <div class="project-tech">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Firestore</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 - Gestock -->
+            <div class="swiper-slide">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="img/Gestock.png" alt="Gestock" class="img-fluid">
+                  <div class="project-overlay">
+                    <div class="project-links">
+                      <a href="https://github.com/AngelChaile/GestorDeMovimientos" target="_blank" class="project-link">
+                        <i class="bi bi-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <div class="project-tags">
+                    <span class="project-tag">Finanzas</span>
+                    <span class="project-tag">Gestión</span>
+                  </div>
+                  <h4 class="project-title">Gestock</h4>
+                  <p class="project-description">
+                    Gestión de movimientos financieros con reportes.
+                  </p>
+                  <div class="project-tech">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>JS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 - Control RRHH -->
+            <div class="swiper-slide">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="img/SCPD.png" alt="Control RRHH" class="img-fluid">
+                  <div class="project-overlay">
+                    <div class="project-links">
+                      <a href="https://github.com/AngelChaile/RRHH_Control_Partes_Demo" target="_blank"
+                        class="project-link">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://rrhh-control-partes-demo.vercel.app/" target="_blank" class="project-link">
+                        <i class="bi bi-eye"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <div class="project-tags">
+                    <span class="project-tag">RRHH</span>
+                    <span class="project-tag">Dashboard</span>
+                  </div>
+                  <h4 class="project-title">Control RRHH</h4>
+                  <p class="project-description">
+                    Dashboard para gestión de recursos humanos.
+                  </p>
+                  <div class="project-tech">
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+                    <span>WebSockets</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 - The Pupil -->
+            <div class="swiper-slide">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="img/Portada_The_Pupil.png" alt="The Pupil" class="img-fluid">
+                  <div class="project-overlay">
+                    <div class="project-links">
+                      <a href="https://github.com/AngelChaile/ThePupilWebPage" target="_blank" class="project-link">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://angelchaile.github.io/ThePupilWebPage/" target="_blank" class="project-link">
+                        <i class="bi bi-eye"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <div class="project-tags">
+                    <span class="project-tag">Juego</span>
+                    <span class="project-tag">Unity</span>
+                  </div>
+                  <h4 class="project-title">The Pupil</h4>
+                  <p class="project-description">
+                    Juego educativo RPG con contenido didáctico.
+                  </p>
+                  <div class="project-tech">
+                    <span>C#</span>
+                    <span>Unity</span>
+                    <span>Aseprite</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6 - LibConstruct -->
+            <div class="swiper-slide">
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="img/Libconstruct.png" alt="LibConstruct" class="img-fluid">
+                  <div class="project-overlay">
+                    <div class="project-links">
+                      <a href="https://github.com/AngelChaile/Challenge1" target="_blank" class="project-link">
+                        <i class="bi bi-github"></i>
+                      </a>
+                      <a href="https://angelchaile.github.io/Challenge1/" target="_blank" class="project-link">
+                        <i class="bi bi-eye"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <div class="project-tags">
+                    <span class="project-tag">Corralon</span>
+                    <span class="project-tag">Construcción</span>
+                  </div>
+                  <h4 class="project-title">LibConstruct</h4>
+                  <p class="project-description">
+                    Catálogo de materiales con sistema de pedidos.
+                  </p>
+                  <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paginación (puntitos) -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Botones de navegación (opcionales en móvil) -->
+          <div class="swiper-button-next d-none d-sm-flex"></div>
+          <div class="swiper-button-prev d-none d-sm-flex"></div>
+        </div>
+      </div>
+
+      <!-- Proyectos ocultos para la función "Ver más" (DESKTOP) -->
+      <div id="proyectos-ocultos-desktop" class="d-none d-md-block">
+        <div class="row g-4 mt-2 d-none" id="proyectos-adicionales">
+
+          <!-- Buscador -->
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/buscador.jpg" alt="Buscador de imágenes" class="img-fluid">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/AngelChaile/Buscador_de_imagenes" target="_blank" class="project-link">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://angelchaile.github.io/Buscador_de_imagenes/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Buscador</span>
+                  <span class="project-tag">Imágenes</span>
+                </div>
+                <h4 class="project-title">Buscador de Imágenes</h4>
+                <p class="project-description">
+                  Buscador de imágenes por palabras clave o emoticons.
+                </p>
+                <div class="project-tech">
+                  <span>JavaScript</span>
+                  <span>API</span>
+                  <span>LazySizes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- APP CLIMA -->
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/AppClima.jpg" alt="App del Clima" class="img-fluid">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/AngelChaile/Clima" target="_blank" class="project-link">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://angelchaile.github.io/Clima/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Proyecto</span>
+                  <span class="project-tag">Clima</span>
+                </div>
+                <h4 class="project-title">App del Clima</h4>
+                <p class="project-description">
+                  Aplicación que muestra el clima actual de una ciudad.
+                </p>
+                <div class="project-tech">
+                  <span>API </span>
+                  <span>JavaScript</span>
+                  <span>Css</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- R.G RUSTICOS -->
+          <div class="col-lg-4 col-md-6">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="img/tarjeta.jfif" alt="R.G RUSTICOS" class="img-fluid">
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a href="https://github.com/AngelChaile/R.G-Rusticos" target="_blank" class="project-link">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://angelchaile.github.io/R.G-Rusticos/" target="_blank" class="project-link">
+                      <i class="bi bi-eye"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Mueblería</span>
+                  <span class="project-tag">Carpintería</span>
+                </div>
+                <h4 class="project-title">R.G RUSTICOS</h4>
+                <p class="project-description">
+                  Página web para mueblería de estilo rústico con catálogo y formulario de contacto.
+                </p>
+                <div class="project-tech">
+                  <span>Css</span>
+                  <span>JavaScript</span>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-5">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center" data-aos="fade-up">
+          <h2 class="section-title mb-4">¿Listo para colaborar?</h2>
+          <p class="lead mb-5">
+            Si tienes un proyecto en mente o necesitas un desarrollador para tu equipo,
+            estaré encantado de conversar contigo.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <h5>Email</h5>
+                <a href="mailto:angelchaile90@gmail.com" class="text-decoration-none">angelchaile90@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-linkedin"></i>
+              </div>
+              <div>
+                <h5>LinkedIn</h5>
+                <a href="https://www.linkedin.com/in/angelchaile/" target="_blank"
+                  class="text-decoration-none">/angelchaile</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="bi bi-github"></i>
+              </div>
+              <div>
+                <h5>GitHub</h5>
+                <a href="https://github.com/AngelChaile" target="_blank" class="text-decoration-none">@AngelChaile</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <a href="mailto:angelchaile90@gmail.com" class="btn btn-primary btn-lg px-5">
+              <i class="bi bi-send me-2"></i>Enviar Mensaje
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="d-flex align-items-center">
+            <img src="img/icono.png" alt="Logo" width="40" height="40" class="me-3">
+            <div>
+              <h5 class="mb-0">Angel Chaile</h5>
+              <p class="text-muted mb-0">Desarrollador Web Full Stack</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="text-md-end">
+            <p class="mb-0">
+              <i class="bi bi-heart-fill text-danger me-1"></i>
+              Hecho con pasión por el desarrollo web
+            </p>
+            <p class="text-muted small mb-0">© 2024 Angel Chaile. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
