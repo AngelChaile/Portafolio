@@ -314,6 +314,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center; /* Fuerza centrado exacto */
   transition: var(--transition);
 }
 
@@ -482,6 +483,125 @@ background-color: var(--primary-color);
 border-color: var(--primary-color);
 transform: translateY(-2px);
 }
+
+
+/* ===== OPTIMIZACIÓN PARA PANTALLAS GRANDES ===== */
+
+/* Contenedor principal - más ancho en monitores grandes */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px; /* Bootstrap xxl default */
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1440px; /* Más ancho para monitores ultra-wide */
+  }
+}
+
+/* Centrar y dar espacio a los costados en todas las secciones */
+section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Asegurar que las imágenes de proyectos no se deformen */
+.project-image {
+  position: relative;
+  height: 220px; /* Altura fija ligeramente mayor */
+  overflow: hidden;
+  background-color: #f8f9fa; /* Fondo mientras carga */
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Clave: mantiene proporción sin deformar */
+  object-position: center; /* Centra la imagen */
+  transition: var(--transition);
+}
+
+/* Para pantallas muy grandes, aumentar ligeramente la altura */
+@media (min-width: 1600px) {
+  .project-image {
+    height: 260px;
+  }
+}
+
+/* Grid de proyectos - mejor espaciado */
+.row.g-4 {
+  --bs-gutter-y: 1.5rem;
+  --bs-gutter-x: 1.5rem;
+}
+
+/* Tarjetas de proyectos - altura consistente */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-tech {
+  margin-top: auto; /* Empuja las tecnologías hacia abajo */
+  padding-top: 1rem;
+}
+
+/* Ajuste del hero section en pantallas grandes */
+@media (min-width: 1400px) {
+  .hero-section .container {
+    max-width: 1400px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  
+  .avatar-container {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* Para pantallas ultra-wide (27"+) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+  
+  .hero-content .lead {
+    font-size: 1.3rem;
+  }
+  
+  .avatar-container {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .project-image {
+    height: 280px;
+  }
+  
+  .row.g-4 {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+  }
+}
+
+
+
+
+
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
